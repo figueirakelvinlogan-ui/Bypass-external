@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#09070f">
+<title>BYPASS External iOS</title>
+<style>
+:root{color-scheme:dark;--p:#a855f7;--line:#48256a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#32104d,#100b19 48%,#07060a);color:#f7f2ff;font:16px -apple-system,BlinkMacSystemFont,sans-serif;min-height:100vh}
+main{max-width:520px;margin:auto;padding:calc(env(safe-area-inset-top) + 22px) 18px calc(env(safe-area-inset-bottom) + 28px)}
+header,.panel{background:linear-gradient(145deg,#1d1428,#100d16);border:1px solid var(--line);border-radius:22px;box-shadow:0 12px 36px #0008}
+header{padding:22px;display:flex;align-items:center;gap:15px}.logo{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:#32144c;color:#d8b4fe;font-size:30px}
+h1{font-size:23px;letter-spacing:1px;margin:0;font-weight:900}h1 span{color:var(--p)}.sub{color:#b9a9c8;font-size:11px;margin-top:5px;letter-spacing:1.5px}
+.panel{padding:18px;margin-top:16px}.row{display:flex;align-items:center;gap:12px}.row+.row{border-top:1px solid #ffffff14;margin-top:15px;padding-top:15px}
+.symbol{font-size:23px;color:#c084fc;width:34px;text-align:center}.copy{flex:1}.copy b{display:block;font-size:15px}.copy small{display:block;color:#aa9bb8;font-size:12px;margin-top:4px;line-height:1.4}
+input[type=checkbox]{appearance:none;width:48px;height:28px;border-radius:30px;background:#51465c;position:relative;transition:.2s;flex:none;margin:0}
+input[type=checkbox]:before{content:"";position:absolute;width:22px;height:22px;left:3px;top:3px;border-radius:50%;background:white;transition:.2s}
+input[type=checkbox]:checked{background:#9333ea}input[type=checkbox]:checked:before{transform:translateX(20px)}
+.status{padding:12px 14px;border-radius:14px;background:#2a1640;color:#e9d5ff;font-size:13px;margin-top:15px}
+.note{color:#b9a9c8;font-size:13px;line-height:1.55}.note strong{color:#e9d5ff}
+button{border:1px solid #7743a8;background:#32144c;color:#f3e8ff;border-radius:14px;padding:12px 15px;font-weight:700;width:100%;margin-top:14px}
+footer{text-align:center;color:#766b82;font-size:11px;padding:22px 0 6px}
+</style>
+</head>
+<body><main>
+<header><div class="logo">♛</div><div><h1>BYPASS <span>EXTERNAL</span></h1><div class="sub">iOS • PRIVACIDADE • CONTROLE</div></div></header>
+<section class="panel">
+ <div class="row"><div class="symbol">◈</div><div class="copy"><b>Modo privacidade</b><small>Controle visual deste painel</small></div><input id="privacy" type="checkbox" aria-label="Modo privacidade"></div>
+ <div class="status" id="status">● Painel pronto — protótipo local</div>
+</section>
+<section class="panel">
+ <div class="row"><div class="symbol">◉</div><div class="copy"><b>Preferência de transmissão</b><small>Lembrete antes de compartilhar a tela</small></div><input type="checkbox" checked aria-label="Lembrete de transmissão"></div>
+ <div class="row"><div class="symbol">●</div><div class="copy"><b>Preferência de gravação</b><small>Lembrete antes de iniciar uma gravação</small></div><input type="checkbox" checked aria-label="Lembrete de gravação"></div>
+ <div class="row"><div class="symbol">⌖</div><div class="copy"><b>Atalho visual</b><small>Exibir controles deste protótipo</small></div><input type="checkbox" checked aria-label="Atalho visual"></div>
+</section>
+<section class="panel">
+ <div class="note"><strong>Sobre ocultar o ESP</strong><br>Este protótipo não consegue remover o ESP do Delta da transmissão ou gravação do iOS. Um app comum não consegue filtrar seletivamente a imagem de outro app. O objetivo de manter os jogadores e o cenário sem os indicadores exige uma captura limpa do jogo, que ainda não está disponível neste projeto.</div>
+ <button id="info">Ver estado do projeto</button>
+ <div class="status" id="detail" hidden>Versão 1.0 • Interface demonstrativa • Não controla o Roblox, Delta ou Discord.</div>
+</section>
+<footer>BYPASS EXTERNAL • PROTÓTIPO iOS 1.0</footer>
+</main>
+<script>
+const privacy=document.getElementById('privacy'),status=document.getElementById('status');
+privacy.addEventListener('change',()=>{status.textContent=privacy.checked?'● Modo privacidade do painel ativado':'● Modo privacidade do painel desativado';});
+document.getElementById('info').addEventListener('click',()=>{const d=document.getElementById('detail');d.hidden=!d.hidden;});
+</script></body></html>
